@@ -1,0 +1,10 @@
+<!-- GauPrasad Logo SVG -->
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Cow -->
+  <path d="M70 80 Q65 70, 75 65 L80 60 L85 65 Q90 68, 88 75 L95 95 Q100 110, 95 125 L90 130 Q85 133, 80 130 L75 125 Q70 115, 72 100 Z" fill="#5C4033"/>
+  <!-- Leaf -->
+  <path d="M110 90 Q115 85, 120 90 Q125 95, 130 105 Q128 115, 120 120 Q115 118, 110 110 Q108 100, 110 90" fill="#6B8E4E"/>
+  <path d="M115 95 Q118 100, 120 105 Q122 110, 124 113" stroke="#8CAF6B" stroke-width="2" fill="none"/>
+  <!-- Flame -->
+  <path d="M100 30 Q95 40, 98 50 Q102 45, 105 50 Q108 40, 105 30 Q102 25, 100 30" fill="#D97A3A"/>
+</svg>
