@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { 
   ShoppingCart, 
   Heart, 
@@ -22,10 +22,17 @@ import {
   CreditCard
 } from 'lucide-react';
 import pachagingbox from '../assets/pachagingbox.png';
+import cup2 from '../assets/cup2.png';
+import cuboid2 from '../assets/cuboid2.jpeg';
 import modak from '../assets/modakshape.png';
+import modak2 from '../assets/modak2.png';
+import modak3 from '../assets/modak3.png';
 import circulartikki from '../assets/circulartikki.png';
+import tikki2 from '../assets/tikki2.png';
+import tikki3 from '../assets/tikki3.jpeg';
 import gheeImg from '../assets/ghee.png';
 import incenseImg from '../assets/insanestics.png';
+import gauprasadLogo from '../assets/gauprasad.jpeg';
 
 const ProductPage = () => {
   const { productId } = useParams();
@@ -54,7 +61,7 @@ const ProductPage = () => {
         '100% organic ingredients',
         'Pleasant natural fragrance',
       ],
-      images: [pachagingbox, pachagingbox, pachagingbox],
+      images: [pachagingbox, cup2, cuboid2],
       description: 'Desi Cow Dung Natural Herbs Sambrani Havan Cup',
       longDescription: `Experience the divine essence of traditional Indian puja with our handcrafted Sambrani Cup Pack. Made from 100% pure desi cow dung sourced from indigenous Gir cows, combined with natural herbs and premium loban.
 
@@ -96,7 +103,7 @@ Perfect for daily puja, havan ceremonies, meditation sessions, and creating a pe
         'Handcrafted modak shape',
         'Most popular choice',
       ],
-      images: [modak, modak, modak],
+      images: [modak, modak2, modak3],
       description: 'Cow Dung Guggal Sambrani Dhoop Cup',
       longDescription: `Our Guggal Modak Pack is our most popular product, loved by thousands of customers across India. The unique modak shape symbolizes Lord Ganesha's favorite sweet, making it perfect for special puja occasions.
 
@@ -138,7 +145,7 @@ Each piece is hand-rolled by women artisans from our village cooperative, provid
         'Traditional design',
         'Budget-friendly option',
       ],
-      images: [circulartikki, circulartikki, circulartikki],
+      images: [circulartikki, tikki2, tikki3],
       description: 'Cow Dung Rose Gulab Sambrani Dhoop Cup',
       longDescription: `Our traditional Cow Dung Cake (Tikki) is the most authentic form of dhoop, used in Indian households for centuries. This budget-friendly option brings the same purity and spiritual benefits as our premium products.
 
@@ -358,10 +365,15 @@ Made with natural charcoal and pure essential oils, they produce minimal smoke w
   };
 
   const handleBackToProducts = () => {
-    // Go back to the previous page (closes this tab or goes back in history)
-    window.close();
-    // If window.close() doesn't work (not opened via script), navigate to buy-now section
+    // Navigate to home page and scroll to buy-now section
     window.location.href = '/#buy-now';
+    // Force scroll after small delay
+    setTimeout(() => {
+      const element = document.getElementById('buy-now');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 200);
   };
 
   return (
@@ -371,9 +383,7 @@ Made with natural charcoal and pure essential oils, they produce minimal smoke w
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <button onClick={handleBackToProducts} className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-[#E07A1F] to-[#7A1D1D] rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">G</span>
-              </div>
+              <img src={gauprasadLogo} alt="GauPrasad Naturals" className="w-12 h-12 rounded-full object-cover" />
               <div className="flex flex-col leading-tight">
                 <span className="font-bold text-xl text-[#5C4033]">GauPrasad</span>
                 <span className="text-xs text-[#8B5A3C] tracking-wider">NATURALS</span>
@@ -384,7 +394,7 @@ Made with natural charcoal and pure essential oils, they produce minimal smoke w
                 onClick={handleBackToProducts}
                 className="text-[#E07A1F] hover:text-[#7A1D1D] font-medium transition-colors"
               >
-                ← Back to Products
+                ← Choose Your Pack
               </button>
             </div>
           </div>
@@ -774,9 +784,7 @@ Made with natural charcoal and pure essential oils, they produce minimal smoke w
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-[#E07A1F] to-[#7A1D1D] rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">G</span>
-                </div>
+                <img src={gauprasadLogo} alt="GauPrasad Naturals" className="w-12 h-12 rounded-full object-cover" />
                 <div className="flex flex-col leading-tight">
                   <span className="font-bold text-xl">GauPrasad</span>
                   <span className="text-xs text-gray-400 tracking-wider">NATURALS</span>
