@@ -1,8 +1,10 @@
 import { useInView } from 'react-intersection-observer';
-import { ShoppingBag, Phone, Package, CreditCard, Check } from 'lucide-react';
+import { ShoppingBag, Phone, Package, CreditCard, Check, ExternalLink } from 'lucide-react';
 import pachagingbox from '../assets/pachagingbox.png';
 import modak from '../assets/modakshape.png';
 import circulartikki from '../assets/circulartikki.png';
+import gheeImg from '../assets/ghee.png';
+import incenseImg from '../assets/insanestics.png';
 
 const BuyNow = () => {
   const { ref, inView } = useInView({
@@ -12,6 +14,7 @@ const BuyNow = () => {
 
   const products = [
     {
+      id: 'sambrani-cup-pack',
       name: 'Sambrani Cup Pack',
       quantity: '20 Cups',
       price: '₹249',
@@ -28,6 +31,7 @@ const BuyNow = () => {
       description: 'Desi Cow Dung Natural Herbs Sambrani Havan Cup',
     },
     {
+      id: 'guggal-modak-pack',
       name: 'Guggal Modak Pack',
       quantity: '50 Pieces',
       price: '₹449',
@@ -45,6 +49,7 @@ const BuyNow = () => {
       description: 'Cow Dung Guggal Sambrani Dhoop Cup',
     },
     {
+      id: 'cow-dung-cake-tikki',
       name: 'Cow Dung Cake (Tikki)',
       quantity: '15 Pieces',
       price: '₹149',
@@ -61,7 +66,8 @@ const BuyNow = () => {
       description: 'Cow Dung Rose Gulab Sambrani Dhoop Cup',
     },
     {
-      name: '',
+      id: 'loban-frankincense',
+      name: 'Loban Frankincense Cup',
       quantity: '20 Cups',
       price: '₹320',
       originalPrice: '₹480',
@@ -73,10 +79,11 @@ const BuyNow = () => {
        
       ],
       popular: false,
-      image: '/images/loban-frankincense-20.jpg',
+      image: pachagingbox,
       description: 'Cow Dung Loban Frankincense Sambrani Cup',
     },
     {
+      id: 'ghee-natural',
       name: 'Ghee Natural',
       quantity: '1 L jar',
       price: '₹1799',
@@ -89,11 +96,12 @@ const BuyNow = () => {
       
       ],
       popular: false,
-      image: 'src/assets/ghee.png',
+      image: gheeImg,
       description: 'Pure natural cow ghee made using traditional methods pooja and daily nutrition.',
     },
 
     {
+      id: 'incense-sticks',
       name: 'Incense Sticks',
       quantity: '100 Pieces',
       price: '₹899',
@@ -106,7 +114,7 @@ const BuyNow = () => {
         'Priority support',
       ],
       popular: false,
-      image: 'src/assets/insanestics.png',
+      image: incenseImg,
       description: 'Premium quality incense sticks with multiple for temples and spiritual use.',
     },
 
@@ -117,8 +125,10 @@ const BuyNow = () => {
     window.open(`https://wa.me/917987889449?text=${encodeURIComponent(message)}`, '_blank');
   };
 
-  const handleAmazonOrder = () => {
-    window.open('https://www.amazon.in', '_blank');
+  const handleBuyNow = (product) => {
+    // Open product page in new tab
+    const productUrl = `/product/${product.id}`;
+    window.open(productUrl, '_blank');
   };
 
   return (
@@ -142,7 +152,8 @@ const BuyNow = () => {
           {products.map((product, index) => (
             <div
               key={index}
-              className={`relative bg-white rounded-3xl p-6 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl ${product.popular ? 'ring-4 ring-[#E07A1F]' : ''
+              onClick={() => handleBuyNow(product)}
+              className={`relative bg-white rounded-3xl p-6 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer ${product.popular ? 'ring-4 ring-[#E07A1F]' : ''
                 } ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`}
               style={{
@@ -198,19 +209,20 @@ const BuyNow = () => {
               </div>
 
               {/* Order Buttons */}
-              <div className="space-y-3">
+              <div className="space-y-3" onClick={(e) => e.stopPropagation()}>
+                <button
+                  onClick={() => handleBuyNow(product)}
+                  className="w-full bg-[#E07A1F] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#c46a30] transition-all duration-300 shadow-lg flex items-center justify-center space-x-2"
+                >
+                  <ExternalLink className="w-5 h-5" />
+                  <span>View Details & Buy</span>
+                </button>
                 <button
                   onClick={() => handleWhatsAppOrder(product)}
                   className="w-full bg-[#25D366] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#20bd5a] transition-all duration-300 shadow-lg flex items-center justify-center space-x-2"
                 >
                   <Phone className="w-5 h-5" />
                   <span>WhatsApp Order</span>
-                </button>
-                <button
-                  onClick={handleAmazonOrder}
-                  className="w-full bg-white text-[#E07A1F] border-2 border-[#E07A1F] px-6 py-3 rounded-full font-semibold hover:bg-[#E07A1F] hover:text-white transition-all duration-300"
-                >
-                  Buy on Amazon
                 </button>
               </div>
             </div>
