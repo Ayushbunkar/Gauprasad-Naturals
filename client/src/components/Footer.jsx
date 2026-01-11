@@ -81,8 +81,8 @@ const Footer = () => {
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-[#E07A1F] flex-shrink-0 mt-1" />
                 <span className="text-[#A3542D]">
-                  Rural Craft Center<br />
-                  Village Dharampur, India
+                  
+                  Village Seoni, India
                 </span>
               </li>
             </ul>
@@ -119,7 +119,7 @@ const Footer = () => {
           <div className="bg-white rounded-2xl p-6 mb-8">
             <h4 className="font-semibold text-[#3A2F2F] mb-3">Important Notes:</h4>
             <ul className="text-sm text-[#A3542D] space-y-2">
-              <li>• Free delivery on all orders across India</li>
+           
               <li>• Easy returns within 7 days if unopened</li>
               <li>• Store in a cool, dry place away from moisture</li>
               <li>• Each cup burns for approximately 30-40 minutes</li>

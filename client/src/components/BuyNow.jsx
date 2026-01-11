@@ -14,14 +14,14 @@ const BuyNow = () => {
     {
       name: 'Sambrani Cup Pack',
       quantity: '20 Cups',
-      price: '₹280',
+      price: '₹249',
       originalPrice: '₹400',
-      savings: 'Save ₹120',
+      savings: 'Save ₹150',
       benefits: [
         'Perfect for daily puja',
         'Natural herbs & loban',
         'Burns 30+ minutes',
-        'Free delivery',
+        
       ],
       popular: false,
       image: pachagingbox,
@@ -29,15 +29,15 @@ const BuyNow = () => {
     },
     {
       name: 'Guggal Modak Pack',
-      quantity: '15 Pieces',
-      price: '₹450',
+      quantity: '50 Pieces',
+      price: '₹449',
       originalPrice: '₹650',
       savings: 'Save ₹200',
       benefits: [
         'Premium guggal fragrance',
         'Best for meditation',
         'Long lasting aroma',
-        'Free delivery',
+       
         'Most popular',
       ],
       popular: true,
@@ -45,23 +45,23 @@ const BuyNow = () => {
       description: 'Cow Dung Guggal Sambrani Dhoop Cup',
     },
     {
-      name: 'Rose Gulab Pack',
+      name: 'Cow Dung Cake (Tikki)',
       quantity: '15 Pieces',
-      price: '₹475',
-      originalPrice: '₹700',
+      price: '₹149',
+      originalPrice: '₹650',
       savings: 'Save ₹225',
       benefits: [
         'Soothing rose fragrance',
         'Perfect for home temple',
         'Premium quality',
-        'Free delivery',
+       
       ],
       popular: false,
       image: circulartikki,
       description: 'Cow Dung Rose Gulab Sambrani Dhoop Cup',
     },
     {
-      name: 'Loban Frankincense',
+      name: '',
       quantity: '20 Cups',
       price: '₹320',
       originalPrice: '₹480',
@@ -70,45 +70,46 @@ const BuyNow = () => {
         'Pure loban fragrance',
         'Ideal for havan',
         'Natural ingredients',
-        'Free delivery',
+       
       ],
       popular: false,
       image: '/images/loban-frankincense-20.jpg',
       description: 'Cow Dung Loban Frankincense Sambrani Cup',
     },
     {
-      name: 'Cinnamon Havan Pack',
-      quantity: '13 Pieces + Dhoop',
-      price: '₹495',
-      originalPrice: '₹750',
+      name: 'Ghee Natural',
+      quantity: '1 L jar',
+      price: '₹1799',
+      originalPrice: '₹2000',
       savings: 'Save ₹255',
       benefits: [
-        'Warm cinnamon aroma',
-        'Includes dhoop sticks',
-        'Festival special',
-        'Free delivery',
+        '100% pure cow ghee',
+        'Rich aroma and natural taste',
+        'Good for digestion & immunity',
+      
       ],
       popular: false,
-      image: '/images/cinnamon-havan-13.jpg',
-      description: 'Cow Dung Cinnamon Sambrani Havan Cup with Dhoop',
+      image: 'src/assets/ghee.png',
+      description: 'Pure natural cow ghee made using traditional methods pooja and daily nutrition.',
     },
+
     {
-      name: 'Bulk Temple Pack',
+      name: 'Incense Sticks',
       quantity: '100 Pieces',
       price: '₹899',
       originalPrice: '₹1499',
       savings: 'Save ₹600',
       benefits: [
-        'Best for temples',
-        'Bulk discount',
-        'Mixed varieties available',
-        'Free delivery',
+        'Ideal for temples & daily pooja',
+        'Bulk pack with better value',
+        'Mixed fragrance varieties',
         'Priority support',
       ],
       popular: false,
-      image: '/images/bulk-temple-100.jpg',
-      description: 'Bulk Pack - Multiple Variants Available',
+      image: 'src/assets/insanestics.png',
+      description: 'Premium quality incense sticks with multiple for temples and spiritual use.',
     },
+
   ];
 
   const handleWhatsAppOrder = (product) => {
@@ -141,12 +142,10 @@ const BuyNow = () => {
           {products.map((product, index) => (
             <div
               key={index}
-              className={`relative bg-white rounded-3xl p-6 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
-                product.popular ? 'ring-4 ring-[#E07A1F]' : ''
-              } ${
-                inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
-              style={{ 
+              className={`relative bg-white rounded-3xl p-6 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl ${product.popular ? 'ring-4 ring-[#E07A1F]' : ''
+                } ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                }`}
+              style={{
                 animation: inView ? `fade-in 0.6s ease-out ${index * 0.15}s forwards` : 'none'
               }}
             >
@@ -158,11 +157,11 @@ const BuyNow = () => {
               )}
 
               {/* Product Image */}
-              <div className="mb-4 rounded-2xl overflow-hidden bg-[#FDEADA] h-56 md:h-64 flex items-center justify-center">
+              <div className="mb-4 rounded-2xl overflow-hidden bg-[#FDEADA] h-56 md:h-64">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="max-w-full max-h-full object-contain"
+                  className="w-full h-full object-cover block"
                   onError={(e) => {
                     e.target.onerror = null;
                     e.target.src = `data:image/svg+xml,%3Csvg width="400" height="300" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="400" height="300" fill="%23FDEADA"/%3E%3Ccircle cx="200" cy="120" r="60" fill="%23A3542D" opacity="0.3"/%3E%3Ccircle cx="200" cy="180" r="40" fill="%237A1D1D" opacity="0.4"/%3E%3Ctext x="200" y="250" text-anchor="middle" fill="%233A2F2F" font-size="16" font-family="Arial">Havan Cup ${product.quantity}%3C/text%3E%3C/svg%3E`;
@@ -250,7 +249,7 @@ const BuyNow = () => {
 
         {/* Trust Badges */}
         <div className="mt-12 text-center">
-          <p className="text-[#A3542D] mb-4">🔒 Secure Payment • 🚚 Free Delivery • 🔄 Easy Returns</p>
+          <p className="text-[#A3542D] mb-4">🔒 Secure Payment  • 🔄 Easy Returns</p>
         </div>
       </div>
     </section>
