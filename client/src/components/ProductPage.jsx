@@ -30,8 +30,15 @@ import modak3 from '../assets/modak3.png';
 import circulartikki from '../assets/circulartikki.png';
 import tikki2 from '../assets/tikki2.png';
 import tikki3 from '../assets/tikki3.jpeg';
-import gheeImg from '../assets/ghee.png';
+import ghee from '../assets/ghee.png';
+import ghee2 from '../assets/ghee2.jpeg';
+import ghee3 from '../assets/ghee3.jpeg';
+import gaumutra from '../assets/gaumutra.jpeg';
+import gaumutra2 from '../assets/gaumutra2.png';
+import gaumutra3 from '../assets/gaumutra3.png';
 import incenseImg from '../assets/insanestics.png';
+import stick2 from '../assets/stick2.png';
+import stick3 from '../assets/stick3.png';
 import gauprasadLogo from '../assets/gauprasad.jpeg';
 
 const ProductPage = () => {
@@ -170,9 +177,9 @@ The circular shape represents the endless cycle of life and spirituality, making
       freeDelivery: true,
       cod: true,
     },
-    'loban-frankincense': {
-      id: 'loban-frankincense',
-      name: 'Loban Frankincense Cup',
+    'gaumutra': {
+      id: 'gaumutra',
+      name: 'Gaumutra ',
       quantity: '20 Cups',
       price: 320,
       originalPrice: 480,
@@ -181,29 +188,29 @@ The circular shape represents the endless cycle of life and spirituality, making
       reviews: 1245,
       sold: 6800,
       benefits: [
-        'Pure loban fragrance',
-        'Ideal for havan',
-        'Natural ingredients',
-        'Traditional aroma',
-        'Spiritual cleansing',
+        'Made with purified gaumutra',
+        'Used for spiritual purification',
+        'Antibacterial & natural',
+        'Eco-friendly & chemical-free',
+        'Traditional Vedic formula',
       ],
-      images: [pachagingbox, pachagingbox, pachagingbox],
-      description: 'Cow Dung Loban Frankincense Sambrani Cup',
-      longDescription: `Experience the ancient aroma of pure Loban (Frankincense) with our specially crafted Sambrani cups. Loban has been used for thousands of years in spiritual practices across cultures for its powerful cleansing and purifying properties.
+      images: [gaumutra, gaumutra2, gaumutra3],
+      description: ' Gaumutra ',
+      longDescription: `Our Gaumutra Herbal Cup is crafted using the sacred combination of cow dung and purified gaumutra (cow urine), following ancient Vedic traditions. Gaumutra has been revered in Ayurveda for its powerful purifying and antibacterial properties.
 
-Our Loban Frankincense cups combine the sacred properties of cow dung with premium quality frankincense resin, creating a divine fragrance that elevates your spiritual practices to new heights.
+Each cup is made with care, combining the spiritual essence of the holy cow with natural herbs to create a divine incense that cleanses your space of negative energies and promotes positive vibrations.
 
-Perfect for havan ceremonies, daily puja, and creating a serene atmosphere in your home or temple.`,
+Perfect for havan ceremonies, spiritual cleansing rituals, and creating a pure, sacred atmosphere in your home or temple.`,
       features: [
-        { icon: Leaf, title: 'Pure Loban', desc: 'Premium frankincense resin' },
-        { icon: Clock, title: 'Long Burn', desc: '35+ minutes per cup' },
-        { icon: Award, title: 'Traditional', desc: 'Ancient recipe' },
-        { icon: Package, title: 'Value Pack', desc: '20 cups per pack' },
+        { icon: Leaf, title: 'Gaumutra Infused', desc: 'Purified cow urine extract' },
+        { icon: Clock, title: 'Effective Burn', desc: '30+ minutes per cup' },
+        { icon: Award, title: 'Vedic Formula', desc: 'Traditional recipe' },
+        { icon: Package, title: 'Purifying', desc: 'Spiritual cleansing' },
       ],
       specifications: {
         'Pack Contains': '20 Cups',
-        'Burning Time': '35+ minutes per cup',
-        'Ingredients': 'Cow dung, Loban resin, Natural herbs',
+        'Burning Time': '30+ minutes per cup',
+        'Ingredients': 'Cow dung, Purified gaumutra, Natural herbs',
         'Weight': '280g (approx)',
         'Shelf Life': '2 years from manufacturing',
         'Storage': 'Keep in dry place away from moisture',
@@ -229,7 +236,7 @@ Perfect for havan ceremonies, daily puja, and creating a serene atmosphere in yo
         'Traditional bilona method',
         'From indigenous cows',
       ],
-      images: [gheeImg, gheeImg, gheeImg],
+      images: [ghee, ghee2, ghee3],
       description: 'Pure natural cow ghee for pooja and daily nutrition',
       longDescription: `Our Pure Desi Ghee is made using the traditional Bilona method from the milk of indigenous Gir cows. This age-old technique ensures that all the natural goodness and nutrients are preserved.
 
@@ -271,7 +278,7 @@ Every spoonful carries the purity of rural India and the blessings of our sacred
         'Long burning time',
         'Natural ingredients',
       ],
-      images: [incenseImg, incenseImg, incenseImg],
+      images: [incenseImg, stick2, stick3],
       description: 'Premium quality incense sticks for temples and spiritual use',
       longDescription: `Our premium Incense Sticks pack contains 100 pieces of handcrafted agarbattis made from natural ingredients. Each stick is carefully rolled using traditional techniques passed down through generations.
 

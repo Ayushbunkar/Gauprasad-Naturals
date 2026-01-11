@@ -5,6 +5,7 @@ import modak from '../assets/modakshape.png';
 import circulartikki from '../assets/circulartikki.png';
 import gheeImg from '../assets/ghee.png';
 import incenseImg from '../assets/insanestics.png';
+import gaumutraImg from '../assets/gaumutra.jpeg';
 
 const BuyNow = () => {
   const { ref, inView } = useInView({
@@ -24,7 +25,7 @@ const BuyNow = () => {
         'Perfect for daily puja',
         'Natural herbs & loban',
         'Burns 30+ minutes',
-        
+
       ],
       popular: false,
       image: pachagingbox,
@@ -41,7 +42,7 @@ const BuyNow = () => {
         'Premium guggal fragrance',
         'Best for meditation',
         'Long lasting aroma',
-       
+
         'Most popular',
       ],
       popular: true,
@@ -59,29 +60,30 @@ const BuyNow = () => {
         'Soothing rose fragrance',
         'Perfect for home temple',
         'Premium quality',
-       
+
       ],
       popular: false,
       image: circulartikki,
       description: 'Cow Dung Rose Gulab Sambrani Dhoop Cup',
     },
     {
-      id: 'loban-frankincense',
-      name: 'Loban Frankincense Cup',
+      id: 'gaumutra-cup',
+      name: 'Gaumutra ',
       quantity: '20 Cups',
-      price: '₹320',
-      originalPrice: '₹480',
-      savings: 'Save ₹160',
+      price: '₹300',
+      originalPrice: '₹450',
+      savings: 'Save ₹150',
       benefits: [
-        'Pure loban fragrance',
-        'Ideal for havan',
-        'Natural ingredients',
-       
+        'Made with purified gaumutra',
+        'Used for spiritual purification',
+        'Antibacterial & natural',
+        'Eco-friendly & chemical-free',
       ],
       popular: false,
-      image: pachagingbox,
-      description: 'Cow Dung Loban Frankincense Sambrani Cup',
-    },
+      image: gaumutraImg,
+      description: 'Gaumutra ',
+    }
+,
     {
       id: 'ghee-natural',
       name: 'Ghee Natural',
@@ -93,7 +95,7 @@ const BuyNow = () => {
         '100% pure cow ghee',
         'Rich aroma and natural taste',
         'Good for digestion & immunity',
-      
+
       ],
       popular: false,
       image: gheeImg,
