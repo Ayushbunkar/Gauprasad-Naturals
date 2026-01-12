@@ -1,0 +1,27 @@
+<!-- GauPrasad Official Logo SVG -->
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Flame/Diya Icon -->
+  <g transform="translate(50, 30)">
+    <!-- Outer flame -->
+    <path d="M50 10 
+             C30 40, 25 60, 30 85 
+             C35 100, 45 110, 50 115 
+             C55 110, 65 100, 70 85 
+             C75 60, 70 40, 50 10 Z" 
+          fill="#5C4033"/>
+    <!-- Inner flame -->
+    <path d="M50 35 
+             C40 55, 38 70, 42 85 
+             C45 92, 48 95, 50 98 
+             C52 95, 55 92, 58 85 
+             C62 70, 60 55, 50 35 Z" 
+          fill="#8B5A3C"/>
+    <!-- Smoke/Steam curves -->
+    <path d="M42 5 C38 -5, 35 -8, 38 -15" 
+          stroke="#5C4033" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M58 5 C62 -5, 65 -8, 62 -15" 
+          stroke="#5C4033" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <!-- Base/Diya holder -->
+  <ellipse cx="100" cy="150" rx="35" ry="8" fill="#5C4033"/>
+</svg>
