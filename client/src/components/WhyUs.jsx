@@ -12,37 +12,37 @@ const WhyUs = () => {
       icon: Leaf,
       title: 'Made from Desi Cow Dung',
       description: 'Pure gobar from indigenous Indian cows, revered in Vedic tradition',
-      color: 'from-green-500 to-emerald-600',
+      color: 'from-orange-400 to-orange-500',
     },
     {
       icon: Ban,
       title: 'No Charcoal, No Chemicals',
       description: 'Completely free from harmful chemicals, charcoal, and artificial additives',
-      color: 'from-red-500 to-rose-600',
+      color: 'from-red-700 to-red-800',
     },
     {
       icon: Flame,
       title: 'Long Burning & Natural Aroma',
       description: 'Burns steadily for 30+ minutes with authentic loban fragrance',
-      color: 'from-orange-500 to-amber-600',
+      color: 'from-amber-600 to-amber-700',
     },
     {
       icon: Recycle,
       title: 'Compostable & Eco-Friendly',
       description: '100% biodegradable, returns to earth naturally without pollution',
-      color: 'from-teal-500 to-cyan-600',
+      color: 'from-red-700 to-red-800',
     },
     {
       icon: ShieldCheck,
       title: 'Safe for Daily Puja',
       description: 'Non-toxic and safe for indoor use, perfect for home temples',
-      color: 'from-blue-500 to-indigo-600',
+      color: 'from-amber-700 to-amber-800',
     },
     {
       icon: Leaf,
       title: 'Handcrafted in India',
       description: 'Made by rural artisans using traditional methods, supporting local communities',
-      color: 'from-purple-500 to-violet-600',
+      color: 'from-orange-500 to-amber-600',
     },
   ];
 
