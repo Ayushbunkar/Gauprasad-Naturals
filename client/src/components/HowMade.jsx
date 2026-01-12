@@ -46,7 +46,7 @@ const HowMade = () => {
   ];
 
   return (
-    <section id="how-made" className="py-20 bg-white">
+    <section id="how-made" className="py-20 bg-gradient-to-b from-[#FDEADA] to-white">
       <div className="container mx-auto px-6 lg:px-8 max-w-6xl">
         {/* Section Header */}
         <div className="text-center mb-16">

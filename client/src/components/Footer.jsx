@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Instagram, Facebook, Flame } from 'lucide-react';
+import gauprasadLogo from '../assets/gauprasad.jpeg';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -23,7 +24,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div>
             <div className="flex items-center space-x-3 mb-6">
-              <img src="/logo.svg" alt="GauPrasad Naturals" className="w-12 h-12" />
+              <img src={gauprasadLogo} alt="GauPrasad Naturals" className="w-12 h-12 object-contain" />
               <div className="flex flex-col leading-tight">
                 <span className="font-[var(--font-heading)] text-2xl font-bold text-[#5C4033]">
                   GauPrasad
