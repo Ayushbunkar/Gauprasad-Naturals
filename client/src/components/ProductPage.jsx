@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { 
   ShoppingCart, 
-  Heart, 
   Share2, 
   Star, 
   Check, 
@@ -23,7 +22,7 @@ import {
 } from 'lucide-react';
 import pachagingbox from '../assets/pachagingbox.png';
 import cup2 from '../assets/cup2.png';
-import cuboid2 from '../assets/cuboid2.jpeg';
+import cuboid2 from '../assets/cuboid2.png';
 import modak from '../assets/modakshape.png';
 import modak2 from '../assets/modak2.png';
 import modak3 from '../assets/modak3.png';
@@ -45,7 +44,6 @@ const ProductPage = () => {
   const { productId } = useParams();
   const [quantity, setQuantity] = useState(1);
   const [selectedImage, setSelectedImage] = useState(0);
-  const [isWishlisted, setIsWishlisted] = useState(false);
   const [activeTab, setActiveTab] = useState('description');
   const [pincode, setPincode] = useState('');
   const [deliveryInfo, setDeliveryInfo] = useState(null);
@@ -119,13 +117,13 @@ Infused with premium Guggal (Indian Bdellium), known for its powerful purifying 
 Each piece is hand-rolled by women artisans from our village cooperative, providing them sustainable livelihoods while preserving traditional craftsmanship.`,
       features: [
         { icon: Leaf, title: 'Pure Guggal', desc: 'Premium quality guggal resin' },
-        { icon: Clock, title: 'Extended Burn', desc: '45+ minutes per piece' },
+        { icon: Clock, title: 'Extended Burn', desc: '30+ minutes per piece' },
         { icon: Award, title: 'Bestseller', desc: '#1 choice of customers' },
         { icon: Package, title: 'Value Pack', desc: '50 pieces per pack' },
       ],
       specifications: {
         'Pack Contains': '50 Pieces',
-        'Burning Time': '45+ minutes per piece',
+        'Burning Time': '30+ minutes per piece',
         'Ingredients': 'Cow dung, Guggal resin, Natural binders',
         'Weight': '400g (approx)',
         'Shelf Life': '2 years from manufacturing',
@@ -138,10 +136,10 @@ Each piece is hand-rolled by women artisans from our village cooperative, provid
     'cow-dung-cake-tikki': {
       id: 'cow-dung-cake-tikki',
       name: 'Cow Dung Cake (Tikki)',
-      quantity: '15 Pieces',
-      price: 149,
-      originalPrice: 650,
-      savings: 501,
+      quantity: '100 Pieces',
+      price: 299,
+      originalPrice: 700,
+      savings: 401,
       rating: 4.7,
       reviews: 1892,
       sold: 8500,
@@ -166,10 +164,10 @@ The circular shape represents the endless cycle of life and spirituality, making
         { icon: Package, title: 'Affordable', desc: 'Best value for money' },
       ],
       specifications: {
-        'Pack Contains': '15 Pieces',
+        'Pack Contains': '100 Pieces',
         'Burning Time': '25+ minutes per tikki',
         'Ingredients': 'Cow dung, Rose extracts, Natural herbs',
-        'Weight': '180g (approx)',
+        'Weight': '1kg (approx)',
         'Shelf Life': '2 years from manufacturing',
         'Storage': 'Keep in dry place away from moisture',
       },
@@ -180,10 +178,10 @@ The circular shape represents the endless cycle of life and spirituality, making
     'gaumutra': {
       id: 'gaumutra',
       name: 'Gaumutra ',
-      quantity: '20 Cups',
+      quantity: '500 ml',
       price: 320,
-      originalPrice: 480,
-      savings: 160,
+      originalPrice: 550,
+      savings: 230,
       rating: 4.6,
       reviews: 1245,
       sold: 6800,
@@ -196,24 +194,23 @@ The circular shape represents the endless cycle of life and spirituality, making
       ],
       images: [gaumutra, gaumutra2, gaumutra3],
       description: ' Gaumutra ',
-      longDescription: `Our Gaumutra Herbal Cup is crafted using the sacred combination of cow dung and purified gaumutra (cow urine), following ancient Vedic traditions. Gaumutra has been revered in Ayurveda for its powerful purifying and antibacterial properties.
+      longDescription: `Our Gaumutra is pure, purified cow urine following ancient Vedic traditions. Gaumutra has been revered in Ayurveda for its powerful purifying and antibacterial properties.
 
-Each cup is made with care, combining the spiritual essence of the holy cow with natural herbs to create a divine incense that cleanses your space of negative energies and promotes positive vibrations.
+This 500ml bottle contains premium quality gaumutra that has been carefully processed and purified for spiritual and traditional use. It is perfect for havan ceremonies, spiritual cleansing rituals, and creating a pure, sacred atmosphere.
 
-Perfect for havan ceremonies, spiritual cleansing rituals, and creating a pure, sacred atmosphere in your home or temple.`,
+Used since ancient times for its spiritual significance and natural benefits.`,
       features: [
-        { icon: Leaf, title: 'Gaumutra Infused', desc: 'Purified cow urine extract' },
-        { icon: Clock, title: 'Effective Burn', desc: '30+ minutes per cup' },
+        { icon: Leaf, title: 'Pure & Natural', desc: 'Purified cow urine' },
+        { icon: Clock, title: 'Long Lasting', desc: '500ml bottle' },
         { icon: Award, title: 'Vedic Formula', desc: 'Traditional recipe' },
         { icon: Package, title: 'Purifying', desc: 'Spiritual cleansing' },
       ],
       specifications: {
-        'Pack Contains': '20 Cups',
-        'Burning Time': '30+ minutes per cup',
-        'Ingredients': 'Cow dung, Purified gaumutra, Natural herbs',
-        'Weight': '280g (approx)',
-        'Shelf Life': '2 years from manufacturing',
-        'Storage': 'Keep in dry place away from moisture',
+        'Volume': '500 ml',
+        'Type': 'Purified Gaumutra',
+        'Use': 'Spiritual & Traditional purposes',
+        'Shelf Life': '1 year from manufacturing',
+        'Storage': 'Keep in cool, dry place',
       },
       inStock: true,
       freeDelivery: true,
@@ -222,9 +219,9 @@ Perfect for havan ceremonies, spiritual cleansing rituals, and creating a pure, 
     'ghee-natural': {
       id: 'ghee-natural',
       name: 'Ghee Natural',
-      quantity: '1 L jar',
-      price: 1799,
-      originalPrice: 2000,
+      quantity: '500 ml jar',
+      price: 899,
+      originalPrice: 1100,
       savings: 201,
       rating: 4.9,
       reviews: 3256,
@@ -250,10 +247,10 @@ Every spoonful carries the purity of rural India and the blessings of our sacred
         { icon: Package, title: 'Multi-Purpose', desc: 'Cooking & pooja use' },
       ],
       specifications: {
-        'Pack Contains': '1 Liter jar',
+        'Pack Contains': '500 ml jar',
         'Source': 'Indigenous Gir cow milk',
         'Method': 'Traditional Bilona churning',
-        'Weight': '1 kg (approx)',
+        'Weight': '500 ml',
         'Shelf Life': '12 months from manufacturing',
         'Storage': 'Keep in cool, dry place',
       },
@@ -264,9 +261,9 @@ Every spoonful carries the purity of rural India and the blessings of our sacred
     'incense-sticks': {
       id: 'incense-sticks',
       name: 'Incense Sticks',
-      quantity: '100 Pieces',
-      price: 899,
-      originalPrice: 1499,
+      quantity: '300 gram',
+      price: 399,
+      originalPrice: 999,
       savings: 600,
       rating: 4.7,
       reviews: 2890,
@@ -280,22 +277,22 @@ Every spoonful carries the purity of rural India and the blessings of our sacred
       ],
       images: [incenseImg, stick2, stick3],
       description: 'Premium quality incense sticks for temples and spiritual use',
-      longDescription: `Our premium Incense Sticks pack contains 100 pieces of handcrafted agarbattis made from natural ingredients. Each stick is carefully rolled using traditional techniques passed down through generations.
+      longDescription: `Our premium Incense Sticks pack contains 300 grams of handcrafted agarbattis made from natural ingredients. Each stick is carefully rolled using traditional techniques passed down through generations.
 
 This bulk pack includes a variety of fragrances including sandalwood, rose, jasmine, and mogra - perfect for different moods and occasions. Whether it's daily puja, meditation, or creating a peaceful ambiance, these incense sticks are your perfect companion.
 
 Made with natural charcoal and pure essential oils, they produce minimal smoke while releasing a long-lasting, divine fragrance.`,
       features: [
         { icon: Leaf, title: 'Natural', desc: 'Pure essential oils' },
-        { icon: Clock, title: 'Long Burning', desc: '45+ minutes per stick' },
-        { icon: Award, title: 'Bulk Value', desc: '100 sticks pack' },
+        { icon: Clock, title: 'Long Burning', desc: '15+ minutes per stick' },
+        { icon: Award, title: 'Bulk Value', desc: '300g pack' },
         { icon: Package, title: 'Mixed Fragrances', desc: 'Multiple varieties' },
       ],
       specifications: {
-        'Pack Contains': '100 Pieces',
-        'Burning Time': '45+ minutes per stick',
+        'Pack Contains': '300 gram',
+        'Burning Time': '15+ minutes per stick',
         'Fragrances': 'Sandalwood, Rose, Jasmine, Mogra',
-        'Weight': '350g (approx)',
+        'Weight': '300g',
         'Shelf Life': '3 years from manufacturing',
         'Storage': 'Keep in dry place away from moisture',
       },
@@ -341,16 +338,43 @@ Made with natural charcoal and pure essential oils, they produce minimal smoke w
 
   const checkDelivery = () => {
     if (pincode.length === 6) {
+      // Madhya Pradesh pincodes start with 45, 46, 47, 48, 49
+      const mpPrefixes = ['45', '46', '47', '48', '49'];
+      const pincodePrefix = pincode.substring(0, 2);
+      const isMadhyaPradesh = mpPrefixes.includes(pincodePrefix);
+      
+      // Calculate delivery dates
+      const today = new Date();
+      let minDays, maxDays;
+      
+      if (isMadhyaPradesh) {
+        minDays = 4;
+        maxDays = 6;
+      } else {
+        minDays = 8;
+        maxDays = 10;
+      }
+      
+      const minDate = new Date(today);
+      minDate.setDate(today.getDate() + minDays);
+      const maxDate = new Date(today);
+      maxDate.setDate(today.getDate() + maxDays);
+      
+      const formatDate = (date) => {
+        return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+      };
+      
       setDeliveryInfo({
         available: true,
-        date: 'Jan 14 - Jan 16, 2026',
+        date: `${formatDate(minDate)} - ${formatDate(maxDate)}`,
         cod: true,
       });
     }
   };
 
   const handleWhatsAppOrder = () => {
-    const message = `Hi! I want to order ${product.name} - ${product.quantity} (Qty: ${quantity}) for ₹${product.price * quantity}`;
+    const totalPrice = product.price * quantity;
+    const message = `Hi! I want to order:\n\nProduct: ${product.name}\nPack Size: ${product.quantity}\nQuantity: ${quantity}\nTotal Amount: ₹${totalPrice}\n\nPlease confirm the order.`;
     window.open(`https://wa.me/917987889449?text=${encodeURIComponent(message)}`, '_blank');
   };
 
@@ -426,27 +450,50 @@ Made with natural charcoal and pure essential oils, they produce minimal smoke w
           <div className="space-y-4">
             <div className="bg-white rounded-3xl p-6 shadow-lg">
               <div className="relative aspect-square rounded-2xl overflow-hidden bg-[#FDEADA]">
-                <img
-                  src={product.images[selectedImage]}
-                  alt={product.name}
-                  className="w-full h-full object-cover"
-                />
+                {/* Image Slider Container */}
+                <div 
+                  className="flex transition-transform duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)] h-full"
+                  style={{ transform: `translateX(-${selectedImage * 100}%)` }}
+                >
+                  {product.images.map((img, index) => (
+                    <img
+                      key={index}
+                      src={img}
+                      alt={`${product.name} - View ${index + 1}`}
+                      className="w-full h-full object-cover flex-shrink-0"
+                    />
+                  ))}
+                </div>
                 {/* Navigation Arrows */}
                 <button
                   onClick={() => setSelectedImage((prev) => (prev > 0 ? prev - 1 : product.images.length - 1))}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-all"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white hover:scale-110 p-3 rounded-full shadow-lg transition-all duration-300 backdrop-blur-sm"
                 >
                   <ChevronLeft className="w-6 h-6 text-[#3A2F2F]" />
                 </button>
                 <button
                   onClick={() => setSelectedImage((prev) => (prev < product.images.length - 1 ? prev + 1 : 0))}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-all"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white hover:scale-110 p-3 rounded-full shadow-lg transition-all duration-300 backdrop-blur-sm"
                 >
                   <ChevronRight className="w-6 h-6 text-[#3A2F2F]" />
                 </button>
                 {/* Discount Badge */}
                 <div className="absolute top-4 left-4 bg-[#7A1D1D] text-white px-3 py-1 rounded-full text-sm font-semibold">
                   {Math.round((product.savings / product.originalPrice) * 100)}% OFF
+                </div>
+                {/* Slide Indicators */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+                  {product.images.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setSelectedImage(index)}
+                      className={`transition-all duration-300 rounded-full ${
+                        selectedImage === index 
+                          ? 'w-8 h-2 bg-[#E07A1F]' 
+                          : 'w-2 h-2 bg-white/60 hover:bg-white'
+                      }`}
+                    />
+                  ))}
                 </div>
               </div>
             </div>
@@ -456,8 +503,10 @@ Made with natural charcoal and pure essential oils, they produce minimal smoke w
                 <button
                   key={index}
                   onClick={() => setSelectedImage(index)}
-                  className={`w-20 h-20 rounded-xl overflow-hidden border-2 transition-all ${
-                    selectedImage === index ? 'border-[#E07A1F] shadow-lg' : 'border-transparent opacity-70 hover:opacity-100'
+                  className={`w-20 h-20 rounded-xl overflow-hidden border-2 transition-all duration-300 transform hover:scale-105 ${
+                    selectedImage === index 
+                      ? 'border-[#E07A1F] shadow-lg scale-105 ring-2 ring-[#E07A1F]/30' 
+                      : 'border-transparent opacity-70 hover:opacity-100'
                   }`}
                 >
                   <img src={img} alt={`View ${index + 1}`} className="w-full h-full object-cover" />
@@ -532,6 +581,7 @@ Made with natural charcoal and pure essential oils, they produce minimal smoke w
                   <Phone className="w-6 h-6" />
                   <span>Order on WhatsApp</span>
                 </button>
+                {/* Buy on Amazon - Commented out for now (not available)
                 <button
                   onClick={() => window.open('https://www.amazon.in', '_blank')}
                   className="flex-1 bg-[#E07A1F] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#c46a30] transition-all duration-300 shadow-lg flex items-center justify-center space-x-2 text-lg"
@@ -539,21 +589,11 @@ Made with natural charcoal and pure essential oils, they produce minimal smoke w
                   <ShoppingCart className="w-6 h-6" />
                   <span>Buy on Amazon</span>
                 </button>
+                */}
               </div>
 
-              {/* Wishlist & Share */}
+              {/* Share */}
               <div className="flex items-center space-x-4">
-                <button
-                  onClick={() => setIsWishlisted(!isWishlisted)}
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-full border-2 transition-all ${
-                    isWishlisted 
-                      ? 'border-[#7A1D1D] bg-[#7A1D1D] text-white' 
-                      : 'border-[#E07A1F] text-[#E07A1F] hover:bg-[#FDEADA]'
-                  }`}
-                >
-                  <Heart className={`w-5 h-5 ${isWishlisted ? 'fill-white' : ''}`} />
-                  <span>{isWishlisted ? 'Wishlisted' : 'Add to Wishlist'}</span>
-                </button>
                 <button
                   onClick={handleShare}
                   className="flex items-center space-x-2 px-4 py-2 rounded-full border-2 border-[#E07A1F] text-[#E07A1F] hover:bg-[#FDEADA] transition-all"
@@ -595,22 +635,12 @@ Made with natural charcoal and pure essential oils, they produce minimal smoke w
                     <Truck className="w-4 h-4 inline mr-2" />
                     Expected delivery: <strong>{deliveryInfo.date}</strong>
                   </p>
-                  {deliveryInfo.cod && (
-                    <p className="text-[#E07A1F]">
-                      <CreditCard className="w-4 h-4 inline mr-2" />
-                      Cash on Delivery available
-                    </p>
-                  )}
                 </div>
               )}
             </div>
 
             {/* Trust Badges */}
-            <div className="grid grid-cols-3 gap-4">
-              <div className="bg-white rounded-xl p-4 text-center shadow-md">
-                <Truck className="w-8 h-8 text-[#E07A1F] mx-auto mb-2" />
-                <p className="text-xs text-[#3A2F2F] font-medium">Free Delivery</p>
-              </div>
+            <div className="grid grid-cols-2 gap-4">
               <div className="bg-white rounded-xl p-4 text-center shadow-md">
                 <Shield className="w-8 h-8 text-[#E07A1F] mx-auto mb-2" />
                 <p className="text-xs text-[#3A2F2F] font-medium">Secure Payment</p>
@@ -802,7 +832,7 @@ Made with natural charcoal and pure essential oils, they produce minimal smoke w
             <div>
               <h3 className="font-semibold text-lg mb-4">Contact Us</h3>
               <p className="text-gray-400">📞 +91 79878 89449</p>
-              <p className="text-gray-400">✉️ orders@gauprasad.in</p>
+              <p className="text-gray-400">✉️ gauprasadnaturals@gmail.com</p>
               <p className="text-gray-400">📍 Village Seoni, India</p>
             </div>
             <div>

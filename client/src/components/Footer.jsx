@@ -9,11 +9,11 @@ const Footer = () => {
   };
 
   const handleInstagram = () => {
-    window.open('https://instagram.com/gauprasad', '_blank');
+    window.open('https://www.instagram.com/gauprasadnaturals', '_blank');
   };
 
   const handleFacebook = () => {
-    window.open('https://facebook.com/gauprasad', '_blank');
+    window.open('https://www.facebook.com/people/Gauprasad-Naturals/pfbid02WknEhzYsr2NzyhPdkZbdUfdVBxgJa49Cxmt4KfKnC2adZeZ9ouwYFrC1fVonPUhWl/', '_blank');
   };
 
   return (
@@ -75,8 +75,8 @@ const Footer = () => {
               </li>
               <li className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 text-[#E07A1F] flex-shrink-0 mt-1" />
-                <a href="mailto:orders@gauprasad.in" className="text-[#A3542D] hover:text-[#E07A1F] transition-colors">
-                  orders@gauprasad.in
+                <a href="mailto:gauprasadnaturals@gmail.com" className="text-[#A3542D] hover:text-[#E07A1F] transition-colors">
+                  gauprasadnaturals@gmail.com
                 </a>
               </li>
               <li className="flex items-start space-x-3">

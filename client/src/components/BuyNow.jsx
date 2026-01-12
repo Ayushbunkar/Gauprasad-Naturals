@@ -1,5 +1,5 @@
 import { useInView } from 'react-intersection-observer';
-import { ShoppingBag, Phone, Package, CreditCard, Check, ExternalLink } from 'lucide-react';
+import { Phone, Package, CreditCard, Check, ExternalLink } from 'lucide-react';
 import pachagingbox from '../assets/pachagingbox.png';
 import modak from '../assets/modakshape.png';
 import circulartikki from '../assets/circulartikki.png';
@@ -52,10 +52,10 @@ const BuyNow = () => {
     {
       id: 'cow-dung-cake-tikki',
       name: 'Cow Dung Cake (Tikki)',
-      quantity: '15 Pieces',
-      price: '₹149',
-      originalPrice: '₹650',
-      savings: 'Save ₹225',
+      quantity: '100 Pieces',
+      price: '₹299',
+      originalPrice: '₹700',
+      savings: 'Save ₹400',
       benefits: [
         'Soothing rose fragrance',
         'Perfect for home temple',
@@ -67,12 +67,12 @@ const BuyNow = () => {
       description: 'Cow Dung Rose Gulab Sambrani Dhoop Cup',
     },
     {
-      id: 'gaumutra-cup',
+      id: 'gaumutra',
       name: 'Gaumutra ',
-      quantity: '20 Cups',
-      price: '₹300',
-      originalPrice: '₹450',
-      savings: 'Save ₹150',
+      quantity: '500 ml',
+      price: '₹320',
+      originalPrice: '₹550',
+      savings: 'Save ₹230',
       benefits: [
         'Made with purified gaumutra',
         'Used for spiritual purification',
@@ -87,10 +87,10 @@ const BuyNow = () => {
     {
       id: 'ghee-natural',
       name: 'Ghee Natural',
-      quantity: '1 L jar',
-      price: '₹1799',
-      originalPrice: '₹2000',
-      savings: 'Save ₹255',
+      quantity: '500 ml jar',
+      price: '₹899',
+      originalPrice: '₹1100',
+      savings: 'Save ₹200',
       benefits: [
         '100% pure cow ghee',
         'Rich aroma and natural taste',
@@ -105,9 +105,9 @@ const BuyNow = () => {
     {
       id: 'incense-sticks',
       name: 'Incense Sticks',
-      quantity: '100 Pieces',
-      price: '₹899',
-      originalPrice: '₹1499',
+      quantity: '300 gram',
+      price: '₹399',
+      originalPrice: '₹999',
       savings: 'Save ₹600',
       benefits: [
         'Ideal for temples & daily pooja',
@@ -236,20 +236,13 @@ const BuyNow = () => {
           <h3 className="font-[var(--font-heading)] text-2xl md:text-3xl font-bold text-[#3A2F2F] text-center mb-8">
             Multiple Payment Options
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-center max-w-2xl mx-auto">
             <div className="flex flex-col items-center">
               <div className="bg-gradient-to-br from-[#E07A1F] to-[#7A1D1D] p-4 rounded-2xl mb-4">
                 <CreditCard className="w-8 h-8 text-white" />
               </div>
               <h4 className="font-semibold text-[#3A2F2F] mb-2">UPI / Cards</h4>
               <p className="text-sm text-[#A3542D]">Pay securely online</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="bg-gradient-to-br from-[#E07A1F] to-[#7A1D1D] p-4 rounded-2xl mb-4">
-                <ShoppingBag className="w-8 h-8 text-white" />
-              </div>
-              <h4 className="font-semibold text-[#3A2F2F] mb-2">Cash on Delivery</h4>
-              <p className="text-sm text-[#A3542D]">Pay when you receive</p>
             </div>
             <div className="flex flex-col items-center">
               <div className="bg-gradient-to-br from-[#E07A1F] to-[#7A1D1D] p-4 rounded-2xl mb-4">
